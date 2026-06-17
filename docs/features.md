@@ -1,63 +1,76 @@
 # Features
 
-Briefnexa focuses on turning meeting recordings into practical meeting records, not just transcripts.
+Briefnexa focuses on turning meeting recordings into practical meeting records, not just transcripts. The MVP is built around a clear workflow: record, process, review, ask, export, and manage.
 
-## Recording and upload
+## Recording workflow
 
-- Browser-based meeting recording
+- Browser-based meeting recording workflow
 - Audio upload and processing
-- Clear processing flow from audio to transcript to report
+- Clear transition from raw audio to transcript to structured report
+- Meeting state handling so users can return to processed meetings later
 
-## AI meeting intelligence
+## Transcript handling
 
-- AI transcription
-- Structured meeting report generation
+- AI-generated transcript for recorded or uploaded meeting audio
+- Speaker-aware transcript review where speaker labels are available
+- Transcript remains available after processing for later review and search
+- Copy workflow for transcript reuse outside the product
+
+## Structured reports
+
 - Executive summary
 - Key decisions
 - Action items with owners and due dates
 - Open questions
 - Risks and concerns
+- Report view designed for quick scanning after a meeting
 
 ## Ask This Meeting
 
 - Ask questions about a specific meeting
-- Generate follow-up email drafts through Ask
-- Generate formal Arabic minutes through Ask
-- Revisit meeting details without manually scanning the full transcript
+- Retrieve targeted answers without manually scanning the full transcript
+- Generate follow-up content through the Ask experience
+- Arabic Ask This Meeting experience shown in the current showcase
 
-## Bilingual user experience
+## Privacy behavior
 
-- English UI
-- Arabic UI
-- RTL support
-- Formal Arabic output use cases
+- Raw audio is treated as the most sensitive artifact in the workflow
+- Raw audio is automatically removed after successful processing
+- Transcript and report artifacts remain available for user value
+- Logs were sanitized to avoid exposing signed URLs, storage keys, API keys, raw provider payloads, full transcripts, or private meeting content
 
-## Meeting management
-
-- Meeting dashboard
-- Search and filters
-- Rename meetings
-- Delete meetings
-- Meeting detail view
-
-## Export and copy actions
+## Export and copy flows
 
 - Export Markdown
 - Copy summary
 - Copy transcript
 - Copy full report
+- Reuse meeting outputs in follow-up emails, notes, or external documents
 
-## Privacy-aware handling
+## Language support
 
-- Raw audio is automatically removed after successful processing
-- Transcript and report remain available for user value
-- Logs are sanitized to reduce exposure of sensitive processing details
+The current product supports bilingual meeting workflows shown in this showcase:
+
+- English UI and meeting usage
+- Arabic UI with RTL layout
+- Arabic meeting report presentation
+- Arabic Ask This Meeting experience
+
+This showcase does not claim broad multilingual translation. The focus is practical English and Arabic meeting capture, review, and follow-up workflows.
+
+## Meeting management
+
+- Meeting dashboard
+- Meeting search and filters
+- Rename meetings
+- Delete meetings
+- Meeting detail view for reviewing transcript, report, and Ask interactions
 
 ## Project highlights
 
 - End-to-end MVP implementation
-- Full-stack product workflow
-- AI transcription and LLM report generation
+- AI transcription and structured report generation
+- Meeting-specific Q&A experience
 - Privacy-aware product decisions
 - Arabic and English UX considerations
 - Practical meeting productivity use case
