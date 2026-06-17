@@ -20,7 +20,7 @@ After processing completes successfully, the raw audio file is automatically rem
 
 ## Transcript and report retention
 
-The transcript and structured report remain available to the user because they are the core product value. They allow the user to review the meeting, search meeting content, ask questions, copy summaries, export reports, and revisit decisions or action items later.
+The transcript and structured meeting report remain available to the user because they are the core product value. They allow the user to review the meeting, search meeting content, ask questions, copy summaries, export reports, and revisit decisions or action items later.
 
 ## Delete meeting behavior
 
@@ -36,6 +36,10 @@ Logs were sanitized to avoid exposing sensitive processing details. The MVP avoi
 - raw provider payloads
 - full transcripts
 - private meeting content
+
+## Public showcase repository boundary
+
+This repository is a public case study for Briefnexa. It contains documentation and demo screenshots only. It does not include user-sensitive internal project files, source code, backend implementation files, frontend source files, database files, migrations, environment files, API keys, credentials, logs, signed URLs, private transcripts, datasets, or real user data.
 
 ## No legal or compliance claims
 
