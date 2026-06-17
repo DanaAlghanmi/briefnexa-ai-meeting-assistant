@@ -4,7 +4,7 @@
 
 Briefnexa is a privacy-focused AI meeting assistant MVP that turns recordings into transcripts, structured meeting reports, action items, and searchable meeting insights.
 
-> This repository is a public showcase and case study. It intentionally does not include source code, backend code, frontend source files, database migrations, credentials, environment files, logs, signed URLs, private transcripts, real user data, or sensitive artifacts.
+> This repository is a public showcase and case study. It intentionally does not include source code, backend implementation, frontend source files, database migrations, credentials, environment files, logs, signed URLs, private transcripts, real user data, or sensitive artifacts.
 
 ## Overview
 
@@ -12,11 +12,13 @@ Briefnexa helps users move from raw meeting audio to usable meeting knowledge. T
 
 The product is designed around a practical workflow: capture the meeting, process it into a transcript, generate a useful report, and make the result easy to search, copy, export, and revisit later.
 
+Briefnexa also supports English and Arabic meeting workflows, including an Arabic RTL interface, Arabic meeting report presentation, and an Arabic Ask This Meeting experience.
+
 ## Problem
 
-Meeting notes often get lost, delayed, or written inconsistently. Important decisions, follow-ups, owners, due dates, risks, and open questions can be scattered across recordings, chats, and memory.
+Meeting notes are often delayed, inconsistent, or incomplete. Important decisions, follow-ups, owners, due dates, risks, and open questions can be scattered across recordings, chats, and memory.
 
-For bilingual teams, the problem is harder. Users may need English and Arabic interfaces, right-to-left support, formal Arabic minutes, and summaries that are useful beyond a simple transcript.
+For bilingual users and Arabic-first teams, the problem is more specific: the product experience needs to work naturally in English and Arabic, including right-to-left layouts and Arabic meeting outputs.
 
 ## Solution
 
@@ -27,46 +29,51 @@ Briefnexa turns meeting recordings into structured, searchable meeting records. 
 - action items with owners and due dates
 - open questions
 - risks and concerns
-- follow-up email drafts
-- formal Arabic meeting minutes
-
-It also includes an “Ask This Meeting” experience so users can ask targeted questions about one meeting instead of manually scanning a transcript.
+- meeting-specific answers through Ask This Meeting
+- follow-up content that can be copied or exported
 
 ## Key features
 
-- Browser-based meeting recording
+- Browser-based meeting recording workflow
 - Audio upload and processing
-- AI transcription
-- Structured meeting report
-- Executive summary
-- Key decisions
-- Action items with owners and due dates
-- Open questions
-- Risks and concerns
-- Ask This Meeting
-- Follow-up email generation through Ask
-- Formal Arabic minutes through Ask
-- English and Arabic UI
-- RTL support
-- Meeting search and filters
-- Rename and delete meetings
-- Export Markdown
-- Copy summary, transcript, and full report
-- Privacy improvement: raw audio is automatically removed after successful processing while the transcript and report remain available
+- AI transcription and speaker-aware transcript review
+- Structured meeting reports with decisions, action items, open questions, and risks
+- Ask-your-meeting interface for follow-up questions
+- Export Markdown and copy workflows for summaries, transcripts, and reports
+- Meeting dashboard with search, filters, rename, and delete actions
+- English and Arabic meeting support, including RTL Arabic UI
+- Arabic meeting report output and Arabic Ask This Meeting experience
+- Privacy-oriented processing flow that removes raw audio after successful processing
+
+## Bilingual Experience
+
+Briefnexa is designed for real meeting workflows in both English and Arabic. The current showcase demonstrates an English experience and an Arabic experience, including RTL interface support, Arabic meeting reports, and Arabic meeting Q&A.
+
+The goal is practical bilingual usability for users and teams who work across English and Arabic, not a generic translation feature.
 
 ## Screenshots
 
-The intended demo screenshot set for this repository is:
+Primary showcase screenshots are embedded below. Additional screenshots are available in the [`screenshots/`](screenshots/) folder.
+
+### English UI
+
+| Landing | Meeting Report | Ask This Meeting |
+| --- | --- | --- |
+| <img src="screenshots/landing.png" alt="Briefnexa English landing page" width="260"> | <img src="screenshots/report-overview.png" alt="Briefnexa English meeting report" width="260"> | <img src="screenshots/ask-meeting.png" alt="Briefnexa English Ask This Meeting" width="260"> |
+
+Additional English screenshots:
 
 | Screen | File |
 | --- | --- |
-| Landing page | `screenshots/landing.png` |
-| Recording flow | `screenshots/recording.png` |
-| Report overview | `screenshots/report-overview.png` |
-| Report details | `screenshots/report-details.png` |
-| Ask This Meeting | `screenshots/ask-meeting.png` |
+| Recording workflow | `screenshots/recording.png` |
 | Dashboard | `screenshots/dashboard.png` |
+| Report details | `screenshots/report-details.png` |
 
+### Arabic UI
+
+| Arabic Landing | Arabic Meeting Report | Arabic Ask This Meeting |
+| --- | --- | --- |
+| <img src="screenshots/landing-ar.png" alt="Briefnexa Arabic landing page" width="260"> | <img src="screenshots/report-ar.png" alt="Briefnexa Arabic meeting report" width="260"> | <img src="screenshots/ask-meeting-ar.png" alt="Briefnexa Arabic Ask This Meeting" width="260"> |
 
 ## Tech stack
 
@@ -100,7 +107,7 @@ More details are available in [`docs/architecture.md`](docs/architecture.md).
 
 Briefnexa treats raw audio as the most sensitive artifact. After processing completes successfully, the raw audio file is removed automatically. The transcript and structured report remain available because they provide the user-facing value of the product.
 
-The MVP also includes log sanitization to avoid exposing signed URLs, storage keys, API keys, raw provider payloads, or full transcripts in logs.
+The MVP also includes log sanitization to avoid exposing signed URLs, storage keys, API keys, raw provider payloads, full transcripts, or private meeting content in logs.
 
 More details are available in [`docs/privacy.md`](docs/privacy.md).
 
@@ -108,13 +115,14 @@ More details are available in [`docs/privacy.md`](docs/privacy.md).
 
 I built the MVP end to end, including the recording experience, upload and processing flow, AI transcription pipeline, structured report generation, meeting detail UI, bilingual interface support, RTL handling, meeting management features, export/copy actions, and the Ask This Meeting experience.
 
-The project combines product thinking, AI workflow design, privacy-aware handling of meeting artifacts, and practical full-stack implementation.
+The project combines product thinking, AI workflow design, privacy-aware handling of meeting artifacts, Arabic/English UX considerations, and practical full-stack implementation.
 
 ## Challenges solved
 
 - Designed a useful output beyond plain transcription.
 - Structured meeting content into decisions, tasks, risks, and open questions.
 - Added bilingual English and Arabic UI support with RTL handling.
+- Supported Arabic meeting reports and Arabic meeting-specific Q&A.
 - Built a meeting-specific Ask flow for targeted questions.
 - Improved privacy by removing raw audio after successful processing.
 - Sanitized logs to reduce the risk of exposing sensitive processing details.
