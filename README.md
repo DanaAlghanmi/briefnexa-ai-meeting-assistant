@@ -67,7 +67,6 @@ The intended demo screenshot set for this repository is:
 | Ask This Meeting | `screenshots/ask-meeting.png` |
 | Dashboard | `screenshots/dashboard.png` |
 
-Only demo screenshots should be included. No private transcripts, real users, credentials, signed URLs, or sensitive data should appear in screenshots.
 
 ## Tech stack
 
